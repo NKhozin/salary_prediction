@@ -33,6 +33,11 @@
 | hyperparameter tuning | FastText+CatBoostRegressor | **10936** | **20.4** |
 
 ### SHAP
+![image](https://github.com/NKhozin/salary_prediction/assets/92330362/a9ee1d9c-c3bd-404b-b40f-21a39f7480e4)
+![image](https://github.com/NKhozin/salary_prediction/assets/92330362/3e572c7c-3f3c-4ab0-b5cb-91671f5d8fb8)
 
 ### Выводы
 В результате проделанных экспериментов значение целевой метрики упало на ~3% относительно бейзлайна. Однако в выборке для обучения большое число повторяющихся профессий, а имеющиеся смещены в сторону "рабочих".
+### Дальнейшие планы
+- расширение выборки
+- эксперименты с применением новых NLP подходов - 
