@@ -4,14 +4,35 @@
 ### Датасет
 663 547 записей
 ### Описание файлов репозитория
-
+- baseline.ipynb - 
+- experiments.ipynb -
+- parser.ipynb -
+- predict.ipynb - 
+- tg_bot.ipynb -
 ### Метрики <br />
-В качестве основной метрики используется MAPE - cредняя абсолютная ошибка в процентах. Также отслеживаем MAE - средняя абсолютная ошибка:
+В качестве основной метрики используется MAPE - cредняя абсолютная ошибка в процентах. Также отслеживаем MAE - средняя абсолютная ошибка.
+Значения посчитаны как среднее на 5 фолдах кросс-валидации.
 ### Эксперименты
-| Описание | Результат |
-|-------|-------|
-| Эмбеддинги из различных энкодеров: multilingual-e5-large, rubert-tiny2, MiniLM-L12-v2, DeepPavlov rubert-base-cased-sentence | multilingual-e5-large показала наилучшие результаты по качеству получаемых эмбеддингов - в топ релевантных вакансий семантического поиска попадают результаты с идентичной должностью. Кроме того, есть совпадения по региону и преимущественная близость мэтчей в опыте работы |
-| Классификатор для результатов семантического поиска | Pre-trained модели для реранжирования результатов не показали ощутимого прироста качества |
-| HRBert-mini| Семантический поиск на эмбеддингах из модели “as is” дает в основном мало релевантные результаты |
-| Эмбеддинги FastText с очисткой данных | FastText хуже улавливает семантическую близость между вакансиями и резюме, где содержание не совпадает в точности, но схоже по смыслу |
-| Эмбеддинги multilingual-e5-large признаков по отдельности. Например, (эмбединги описания вакансий/резюме + эмбединги остальных признаков) | Результаты отличается незначительно от исходного варианта |
+| Стадия | Название | MAE | MAPE |
+|-------|-------|-------|-------|
+| baseline | FastText + LR | 16283.3 | 29.53 |
+| baseline | FastText + RidgeRegression | 16267.7 | 29.49 |
+| baseline | FastText + LassoRegression | 16266.6 | 29.53 |
+| baseline | FastText + KNNRegression | 14986.2 | 27.6 |
+| baseline | FastText + DecisionTreeRegressor | 15059.2 | 28.39 |
+| baseline | FastText + CatBoostRegressor | **12754.2** | **23.52** |
+| exp. 1 | NLTK + FastText + CatBoostRegressor | 12615.5 | 23.24 |
+| exp. 1 | Spacy + FastText + CatBoostRegressor | **12580.7** | **23.17** |
+| exp. 1 | StemLemPipe + FastText + CatBoostRegressor | 12616.2 | 23.25 |
+| exp. 2 |  CatBoostRegressor with text_features v.1 | 13267 | 24.56 |
+| exp. 2 |  Spacy + CatBoostRegressor with text_features v.1 | 13274.3 | 24.56 |
+| exp. 2 |  Spacy + CatBoostRegressor with text_features v.2 | 13823.3 | 25.45 |
+| exp. 2 |  FastText + CatBoostRegressor with text_features v.1 | 13137.9 | 24.25 |
+| exp. 2 |  FastText + CatBoostRegressor with text_features v.2 | 14043 | 25.73 |
+| exp. 3 | multilingual_e5+CatBoostRegressor | 13564.8 | 20.4 |
+| hyperparameter tuning | FastText+CatBoostRegressor | **10936** | **20.4** |
+
+### SHAP
+
+### Выводы
+В результате проделанных экспериментов значение целевой метрики упало на ~3% относительно бейзлайна. Однако в выборке для обучения большое число повторяющихся профессий, а имеющиеся смещены в сторону "рабочих".
