@@ -50,7 +50,11 @@
 - расширение выборки по профессиям и регионам
 - эксперименты с применением новых NLP подходов - создание собственных эмбеддингов резюме, кластеризация эмбеддингов и прочие
 ### Telegram бот
-https://t.me/itmo_salary_prediction_bot
+Для того чтобы воспользоваться ботом, перейдите по ссылке или QR коду: <br />
+[itmo_salary_prediction_bot](https://t.me/itmo_salary_prediction_bot) <br />
 
+![image](https://github.com/NKhozin/salary_prediction/assets/92330362/bb2e0981-3284-4bf3-b57c-90d1fab5022f) <br />
+Данный бот не устойчив к входным данным отличным от формата указанного в примере, так как основной целью является минимизация ошибок предсказания, а не создание полноценного сервиса.
 ### Пример предсказания
-![image](https://github.com/NKhozin/salary_prediction/assets/92330362/837b6248-f2a1-4cf9-aa07-fd7dbc62db0a)
+![image](https://github.com/NKhozin/salary_prediction/assets/92330362/39df6f74-8cd2-4e6b-a8e7-ff44eb63726b)
+
