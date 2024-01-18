@@ -27,9 +27,9 @@
 | baseline | FastText + LassoRegression | 16266.6 | 29.53 |
 | baseline | FastText + KNNRegression | 14986.2 | 27.6 |
 | baseline | FastText + DecisionTreeRegressor | 15059.2 | 28.39 |
-| baseline | FastText + CatBoostRegressor | **12754.2** | **23.52** |
+| **baseline** | **FastText + CatBoostRegressor** | **12754.2** | **23.52** |
 | exp. 1 | NLTK + FastText + CatBoostRegressor | 12615.5 | 23.24 |
-| exp. 1 | Spacy + FastText + CatBoostRegressor | **12580.7** | **23.17** |
+| **exp. 1** | **Spacy + FastText + CatBoostRegressor** | **12580.7** | **23.17** |
 | exp. 1 | StemLemPipe + FastText + CatBoostRegressor | 12616.2 | 23.25 |
 | exp. 2 | CatBoostRegressor with text_features v.1 | 13267 | 24.56 |
 | exp. 2 | Spacy + CatBoostRegressor with text_features v.1 | 13274.3 | 24.56 |
@@ -37,7 +37,7 @@
 | exp. 2 | FastText + CatBoostRegressor with text_features v.1 | 13137.9 | 24.25 |
 | exp. 2 | FastText + CatBoostRegressor with text_features v.2 | 14043 | 25.73 |
 | exp. 3 | multilingual_e5+CatBoostRegressor | 13564.8 | 20.4 |
-| hyperparameter tuning | FastText+CatBoostRegressor | **10936** | **20.4** |
+| **hyperparameter tuning** | **FastText+CatBoostRegressor** | **10936** | **20.4** |
 
 ### Вклад/важность признаков по SHAP
 ![image](https://github.com/NKhozin/salary_prediction/assets/92330362/a9ee1d9c-c3bd-404b-b40f-21a39f7480e4)
