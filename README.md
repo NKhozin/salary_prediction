@@ -31,11 +31,11 @@
 | exp. 1 | NLTK + FastText + CatBoostRegressor | 12615.5 | 23.24 |
 | exp. 1 | Spacy + FastText + CatBoostRegressor | **12580.7** | **23.17** |
 | exp. 1 | StemLemPipe + FastText + CatBoostRegressor | 12616.2 | 23.25 |
-| exp. 2 |  CatBoostRegressor with text_features v.1 | 13267 | 24.56 |
-| exp. 2 |  Spacy + CatBoostRegressor with text_features v.1 | 13274.3 | 24.56 |
-| exp. 2 |  Spacy + CatBoostRegressor with text_features v.2 | 13823.3 | 25.45 |
-| exp. 2 |  FastText + CatBoostRegressor with text_features v.1 | 13137.9 | 24.25 |
-| exp. 2 |  FastText + CatBoostRegressor with text_features v.2 | 14043 | 25.73 |
+| exp. 2 | CatBoostRegressor with text_features v.1 | 13267 | 24.56 |
+| exp. 2 | Spacy + CatBoostRegressor with text_features v.1 | 13274.3 | 24.56 |
+| exp. 2 | Spacy + CatBoostRegressor with text_features v.2 | 13823.3 | 25.45 |
+| exp. 2 | FastText + CatBoostRegressor with text_features v.1 | 13137.9 | 24.25 |
+| exp. 2 | FastText + CatBoostRegressor with text_features v.2 | 14043 | 25.73 |
 | exp. 3 | multilingual_e5+CatBoostRegressor | 13564.8 | 20.4 |
 | hyperparameter tuning | FastText+CatBoostRegressor | **10936** | **20.4** |
 
@@ -44,8 +44,10 @@
 ![image](https://github.com/NKhozin/salary_prediction/assets/92330362/3e572c7c-3f3c-4ab0-b5cb-91671f5d8fb8)
 
 ### Выводы
-В результате проделанных экспериментов значение целевой метрики упало на ~3% относительно бейзлайна. Однако в выборке для обучения большое число повторяющихся профессий, а имеющиеся смещены в сторону "рабочих". <br />
-Также, если посмотреть на график SHAP, видно, что признак "city_id_Остальные" при низких значения (0) имеет положительный вклад в значение целевой переменной, что в теории должно быть наоборот: чем больше населенный пункт, тем больше заработная плата, но здесь это не подтверждается. Данные смещены в сторону определенных городов.
+В результате проделанных экспериментов значение целевой метрики упало на ~3% относительно бейзлайна. 
+Наибольшую важность для предскзания заработной платы по результатам обучения имеют признаки, связанные с городом, опытом и графиком работы, что в теории соответствует действительности.
+Интересно, что эмбеддинги multilingual_e5 оказались хуже FastText, ожидалось другое. Наибольший прирост целевой метрики получен в результате оптимизации гиперпараметров.
+
 ### Дальнейшие планы
 - расширение выборки по профессиям и регионам
 - эксперименты с применением новых NLP подходов - создание собственных эмбеддингов резюме, кластеризация эмбеддингов и прочие
