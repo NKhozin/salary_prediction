@@ -36,7 +36,7 @@
 | exp. 2 | Spacy + CatBoostRegressor with text_features v.2 | 13823.3 | 25.45 |
 | exp. 2 | FastText + CatBoostRegressor with text_features v.1 | 13137.9 | 24.25 |
 | exp. 2 | FastText + CatBoostRegressor with text_features v.2 | 14043 | 25.73 |
-| exp. 3 | multilingual_e5+CatBoostRegressor | 13564.8 | 20.4 |
+| exp. 3 | multilingual_e5+CatBoostRegressor | 13564.8 | 25.11 |
 | **hyperparameter tuning** | **FastText+CatBoostRegressor** | **10936** | **20.4** |
 
 ### Вклад/важность признаков по SHAP
