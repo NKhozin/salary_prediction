@@ -22,7 +22,7 @@
 ### Эксперименты
 | Стадия | Название | MAE | MAPE |
 |-------|-------|-------|-------|
-| baseline | FastText + LR | 16283.3 | 29.53 |
+| **baseline** | FastText + LR | 16283.3 | **29.53** |
 | exp. 1 | FastText + RidgeRegression | 16267.7 | 29.49 |
 | exp. 1 | FastText + LassoRegression | 16266.6 | 29.53 |
 | exp. 1 | FastText + KNNRegression | 14986.2 | 27.6 |
