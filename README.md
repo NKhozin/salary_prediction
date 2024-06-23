@@ -29,7 +29,7 @@
 | exp. 1 | FastText + DecisionTreeRegressor | 15059.2 | 28.39 |
 | **exp. 2** | **FastText + CatBoostRegressor** | **12754.2** | **23.52** |
 | exp. 2 | NLTK + FastText + CatBoostRegressor | 12615.5 | 23.24 |
-| **exp. 1** | **Spacy + FastText + CatBoostRegressor** | **12580.7** | **23.17** |
+| **exp. 2** | **Spacy + FastText + CatBoostRegressor** | **12580.7** | **23.17** |
 | exp. 2 | StemLemPipe + FastText + CatBoostRegressor | 12616.2 | 23.25 |
 | exp. 3 | CatBoostRegressor with text_features v.1 | 13267 | 24.56 |
 | exp. 3 | Spacy + CatBoostRegressor with text_features v.1 | 13274.3 | 24.56 |
