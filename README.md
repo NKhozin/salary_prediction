@@ -23,20 +23,20 @@
 | Стадия | Название | MAE | MAPE |
 |-------|-------|-------|-------|
 | baseline | FastText + LR | 16283.3 | 29.53 |
-| baseline | FastText + RidgeRegression | 16267.7 | 29.49 |
-| baseline | FastText + LassoRegression | 16266.6 | 29.53 |
-| baseline | FastText + KNNRegression | 14986.2 | 27.6 |
-| baseline | FastText + DecisionTreeRegressor | 15059.2 | 28.39 |
-| **baseline** | **FastText + CatBoostRegressor** | **12754.2** | **23.52** |
+| exp. 1 | FastText + RidgeRegression | 16267.7 | 29.49 |
+| exp. 1 | FastText + LassoRegression | 16266.6 | 29.53 |
+| exp. 2 | FastText + KNNRegression | 14986.2 | 27.6 |
+| exp. 2 | FastText + DecisionTreeRegressor | 15059.2 | 28.39 |
+| **exp. 1** | **FastText + CatBoostRegressor** | **12754.2** | **23.52** |
 | exp. 1 | NLTK + FastText + CatBoostRegressor | 12615.5 | 23.24 |
 | **exp. 1** | **Spacy + FastText + CatBoostRegressor** | **12580.7** | **23.17** |
-| exp. 1 | StemLemPipe + FastText + CatBoostRegressor | 12616.2 | 23.25 |
-| exp. 2 | CatBoostRegressor with text_features v.1 | 13267 | 24.56 |
-| exp. 2 | Spacy + CatBoostRegressor with text_features v.1 | 13274.3 | 24.56 |
-| exp. 2 | Spacy + CatBoostRegressor with text_features v.2 | 13823.3 | 25.45 |
-| exp. 2 | FastText + CatBoostRegressor with text_features v.1 | 13137.9 | 24.25 |
-| exp. 2 | FastText + CatBoostRegressor with text_features v.2 | 14043 | 25.73 |
-| exp. 3 | multilingual_e5+CatBoostRegressor | 13564.8 | 25.11 |
+| exp. 2 | StemLemPipe + FastText + CatBoostRegressor | 12616.2 | 23.25 |
+| exp. 3 | CatBoostRegressor with text_features v.1 | 13267 | 24.56 |
+| exp. 3 | Spacy + CatBoostRegressor with text_features v.1 | 13274.3 | 24.56 |
+| exp. 3 | Spacy + CatBoostRegressor with text_features v.2 | 13823.3 | 25.45 |
+| exp. 3 | FastText + CatBoostRegressor with text_features v.1 | 13137.9 | 24.25 |
+| exp. 3 | FastText + CatBoostRegressor with text_features v.2 | 14043 | 25.73 |
+| exp. 4 | multilingual_e5+CatBoostRegressor | 13564.8 | 25.11 |
 | **hyperparameter tuning** | **FastText+CatBoostRegressor** | **10936** | **20.4** |
 
 ### Выводы
